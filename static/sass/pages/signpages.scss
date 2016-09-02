@@ -19,12 +19,12 @@ body {
         position: relative;
         margin: -2em 0em 2em 0em;
         padding: 1.5em 3em;
-//        background: #08409b;
+//        background: #08409b;  Blue color
         background: #035310;
         color: white;
         border-radius: 0.2em;
     }
-    form input[type="text"] {
+    form input {
         margin: 0 auto;
         display: block;
         padding: 0.5em 1em;
@@ -43,7 +43,7 @@ body {
 
     button{
         padding: 0.7em 2em;
-//        background: #08409b;
+//        background: #08409b;  Blue color
         background: #035310;
         border: none;
         font-size: 1.05em;
