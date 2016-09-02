@@ -10,6 +10,14 @@ def index():
 def submit():
     return render_template('submit.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
 #API
 @app.route('/api/submit')
 def api_submit():
@@ -20,6 +28,25 @@ def api_submit():
     db.session.add(book)
     db.session.commit()
     return redirect('/')
+
+@app.route('/api/signup', methods=['POST'])
+def api_signup():
+    username = request.args.get('username')
+    password = request.args.get('password')
+    email = request.args.get('email')
+    #check if email and username are available
+    db.session.add(User(username, password, email))
+    db.session.commit()
+    return "WIP"
+
+@app.route('/api/login', methods=['POST'])
+def api_login():
+    username = request.args.get('username')
+    password = request.args.get('password')
+    #check user info
+    #set cookie and stuff if correct
+    #return a message if incorrect or w/e
+    return "WIP"
 
 
 #~TEMPORARY!~~~~#
