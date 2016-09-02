@@ -2,7 +2,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/sass/css/compile.css"> </head>
+    <link rel="stylesheet" href="/static/sass/css/signin.css">
+    <script src="https://use.fontawesome.com/3b71bbcaa4.js"></script>
+</head>
 
 <body>
     <div class="navbar">
@@ -17,12 +19,16 @@
             <li id="#cart"><img src="static/images/cart.svg" alt=""><a href="#">0</a></li>
         </ul>
     </div>
-    <header>
-        <div class="hero-text">
-            <h1>PROGRAMMING BOOKS</h1>
-            <p>Our web-shop is packed with programming books waiting for you to pick them up!</p>
-        </div>
-    </header>
+    <div class="form">
+        <h2>Log in</h2>
+        <form>
+            <input type="text" placeholder="Username"
+            id="username">
+             <input type="password" placeholder="Password">
+            <button type="submit"><i class="fa fa-sign-in" aria-hidden="true">  Log in</i> </button>
+        </form>
+        <p>Dont have an account? <a href="signup.html">Sign up</a>  .</p>
+    </div>
 </body>
 
 </html>
