@@ -24,12 +24,9 @@ def api_submit():
 
 
 #~TEMPORARY!~~~~#
-@app.route('/api/all_books')
+@app.route('/admin/all_books')
 def api_all_books():
-    res = ""
-    for b in Book.query.all():
-        res += b.title
-    return res
+    return render_template('admin/all_books.html', books=Book.query.all())
 
 if __name__=='__main__':
     app.run()
