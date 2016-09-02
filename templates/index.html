@@ -1,20 +1,28 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Web Shop - Welcome</title>
-    </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" href="../static/sass/css/compile.css"> </head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <!-- Outer span is for the border around the logo, inner span is for the color change.        -->
+            <h1><span id="border-span"><span class="color_1">Dev</span>Shop</h1></span>
+        </div>
         
-        <h3>Welcome to Web Shop, {{ name }}</h3>
-        
-        <p>This is a cool shop that has the best products of this category.
-        You can choose from a huge variety. We have the best products.
-        And there is a huge variety. Of products. They're the best.
-        
-        Thanks for shopping with us!</p>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">shop</a></li>
+            <li id="#cart"><img src="static/images/cart.svg" alt=""><a href="#">0</a></li>
+        </ul>
+    </div>
+    <header> 
+    <div class="hero-text">
+        <h1>PROGRAMMING BOOKS</h1>
+        <p>Our web-shop is packed with programming books waiting for you to pick them up!</p>
+    </div>
+    </header>
+</body>
 
-
-
-
-    </body>
 </html>
