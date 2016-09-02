@@ -16,7 +16,6 @@ def api_submit():
     book_name = request.args.get('name')
     book_description = request.args.get('description')
     #book_img = request.args.get('image')
-    print('new book:\n' + book_name + '\n' + book_description)
     book = Book(book_name, book_description)
     db.session.add(book)
     db.session.commit()
