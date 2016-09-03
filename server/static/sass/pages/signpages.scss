@@ -1,9 +1,10 @@
 @import '../base/reset';
 @import '../layout/navbar';
-body {
+
+#signpagesBody {
     display: flex;
     background: #99e74f;
-    background: url(/static/images/forest.JPG);
+    background: url(/server/static/images/forest.JPG);
     background-size: cover;
 }
 
@@ -14,12 +15,11 @@ body {
     vertical-align: middle;
     background: white;
     padding: 1em 5em 5em 5em;
-    border-radius: 0.4em;
     h2 {
         position: relative;
         margin: -2em 0em 2em 0em;
         padding: 1.5em 3em;
-//        background: #08409b;  Blue color
+        z-index: 3;
         background: #035310;
         color: white;
         border-radius: 0.2em;

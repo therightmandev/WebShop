@@ -2,24 +2,27 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/sass/css/signin.css">
+    <link rel="stylesheet" href="/server/static/sass/css/compile.css">
     <script src="https://use.fontawesome.com/3b71bbcaa4.js"></script>
 </head>
 
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <!-- Outer span is for the border around the logo, inner span is for the color change.        -->
-            <h1><span id="border-span"><span class="color_1">Dev</span>Shop</h1></span>
-        </div>
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="#">shop</a></li>
-            <li><a href="login.html">log in</a></li>
-            <li id="#cart"><img src="static/images/cart.svg" alt=""><a href="#">0</a></li>
-        </ul>
-    </div>
-    <div class="form">
+<body id="signpagesBody">
+            <div class="navbar">
+            <div class="logo">
+                <!-- Outer span is for the border around the logo, inner span is for the color change.        -->
+                <h1><span id="border-span"><span class="color_1">Dev</span>Shop</h1></span>
+            </div>
+            <span class="hide-desktop burger-menu top-right">☰</span>
+            <nav id="nav">
+            <ul class="nav-list hide-mobile">
+                <span class="hide-desktop burger-menu">X</span>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="login.html">log in</a></li>
+                <li id="#cart"><img src="/server/static/images/cart.svg" alt=""><a href="#">0</a></li>
+            </ul>
+            </nav>
+        </div>  <div class="form">
         <h2>Sign up</h2>
         <form>
             <input type="text" placeholder="Username" id="username">
@@ -30,6 +33,11 @@
         </form>
         <p>Already have an account?<a href="login.html">   Log in</a> .</p>
     </div>
+    
+                <!--  My script          -->
+            <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+            <script  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+            <script src="/server/static/scripts/main.js"></script>
 </body>
 
 </html>

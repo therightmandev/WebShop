@@ -1,0 +1,26 @@
+/*********************
+MIXIN FOR BREAKPOINTS
+*********************/
+
+
+ @mixin breakpoint($point) {
+    @if $point == "xxlarge" {
+     @media (max-width: 120em){ @content ; } // 1921px
+  }
+   @else if $point == "xlarge" {
+     @media (max-width: 90em) { @content ; } // 1440px
+  }
+   @else if $point == "large" {
+     @media (max-width: 64em) { @content ; } // 1024px
+  }
+   @else if $point == "medium" {
+     @media (max-width: 40em) { @content ; } // 640px
+  }
+    @else if $point == "small" {
+     @media (max-width: 27em) { @content ; } // 432px
+  }
+   @else if $point == "xsmall" {
+     @media (max-width: 19em) { @content ; } // 304px
+  }
+
+}

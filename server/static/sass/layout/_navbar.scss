@@ -1,0 +1,104 @@
+@import '../base/mixins';
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background-color: #000013;
+    //Hide the hamburger menu on desktop
+    .hide-desktop {
+        color: black;
+        display: none;
+    }
+    .logo {
+        color: white;
+        padding: 10px 10px;
+        margin-left: 30px;
+        display: inline-block;
+        .color_1 {
+            color: #d65041;
+        }
+        #border-span {
+            display: inline-block;
+            padding: 0.1em 0.2em;
+            border: white solid 3px;
+        }
+    }
+    nav ul {
+        text-align: right;
+        position: relative;
+        top: -58px;
+        z-index: 1000;
+        right: 10%;
+    }
+    nav ul li {
+        display: inline;
+        padding: 1.5em 3em;
+        text-transform: uppercase;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            transition: 0.35s;
+            color: #d65041;
+        }
+    }
+    nav ul img {
+        display: inline-block;
+        position: relative;
+        top: 10px;
+        height: 32px;
+        width: 32px;
+    }
+    @include breakpoint(large) {
+        nav ul {
+            right: 5%;
+        }
+        nav ul li {
+            padding: 1.5em;
+        }
+    }
+    @include breakpoint(medium) {
+        .navbar{
+            position: relative;
+            z-index: 1000;
+        }
+        .hide-mobile {
+            display: none;         
+        }
+        
+        nav ul {
+            position: fixed;
+            opacity: 0.9;
+            z-index: 1000;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #011b79;
+            top: 0px; bottom: 0; left: 0; right: 0;
+        }
+        nav span {
+            margin-top: 1em;
+            color: white;
+            display: block;
+        }
+        nav ul li {
+            margin-top: 2em;
+            display: block;
+        }
+        .burger-menu {
+            display: inline-block;
+            padding: 0.6em 1em;
+            cursor: pointer;
+            color: white;
+        }
+        .top-right {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+        }
+    }
+}
