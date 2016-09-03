@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/server/static/sass/css/compile.min.css">
+    <link rel="stylesheet" href="static/sass/css/compile.min.css">
     <script src="https://use.fontawesome.com/3b71bbcaa4.js"></script>
 </head>
 
@@ -16,27 +16,27 @@
             <nav>
             <ul class="nav-list hide-mobile">
                 <span class="hide-desktop burger-menu">X</span>
-                <li><a href="index.html">home</a></li>
+                <li><a href="/">home</a></li>
                 <li><a href="#">shop</a></li>
-                <li><a href="login.html">log in</a></li>
-                <li id="#cart"><img src="/server/static/images/cart.svg"><a href="#">0</a></li>
+                <li><a href="/login">log in</a></li>
+                <li id="#cart"><img src="static/images/cart.svg"><a href="#">0</a></li>
             </ul>
             </nav>
         </div>
         <div class="form">
             <h2>Log in</h2>
-            <form>
-                <input type="text" placeholder="Username" id="username">
-                <input type="password" placeholder="Password">
+            <form action="/api/login">
+                <input name="username" type="text" placeholder="Username" id="username">
+                <input name="password" type="password" placeholder="Password">
                 <button type="submit"><i class="fa fa-sign-in" aria-hidden="true">  Log in</i> </button>
             </form>
-            <p>Dont have an account? <a href="signup.html">Sign up</a> .</p>
+            <p>Dont have an account? <a href="/signup">Sign up</a> .</p>
         </div>
         
             <!--  My script          -->
             <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
             <script  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
-            <script src="/server/static/scripts/main.js"></script>
+            <script src="static/scripts/main.js"></script>
 </body>
 
 </html>
