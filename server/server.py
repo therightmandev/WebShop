@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from .models import Book
+from .models import Book, User
 from . import app, db
 
 @app.route('/')
@@ -19,7 +19,7 @@ def signup():
     return render_template('signup.html')
 
 #API
-@app.route('/api/submit')
+@app.route('/api/submit', methods=['POST'])
 def api_submit():
     book_name = request.args.get('name')
     book_description = request.args.get('description')
