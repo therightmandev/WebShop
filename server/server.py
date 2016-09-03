@@ -35,6 +35,7 @@ def api_signup():
     password = request.args.get('password')
     email = request.args.get('email')
     #check if email and username are available
+    print('new user:', username)
     db.session.add(User(username, password, email))
     db.session.commit()
     return "WIP"
@@ -43,6 +44,7 @@ def api_signup():
 def api_login():
     username = request.args.get('username')
     password = request.args.get('password')
+    print('logging in:', username)
     #check user info
     #set cookie and stuff if correct
     #return a message if incorrect or w/e
