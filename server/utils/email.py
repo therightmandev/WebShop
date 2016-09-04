@@ -1,4 +1,4 @@
-import smtplib
+import smtplib, socket
 from .. import EMAIL, EMAIL_PASSWORD
 
 
@@ -11,10 +11,18 @@ def send_verification_email(email):
     msg = 'Hey hey!'
     username = EMAIL
     password = EMAIL_PASSWORD
-    server = smtplib.SMTP('smtp.gmail.com:587')
-    server.ehlo()
-    server.starttls()
-    server.login(username,password)
-    server.sendmail(EMAIL, email, msg)
-    server.quit()
+    try:
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.ehlo()
+        server.starttls()
+        try:
+            server.login(username,password)
+        except smtplib.SMTPAuthenticationError:
+            sys.exit('Email and/or password in server/config.py is incorrect')
+        server.sendmail(EMAIL, email, msg)
+        server.quit()
+        return (True,)
+    except socket.gaierror as s:
+        print('SOCKET ERROR!', s)
+        return (False, 'socket')
  
