@@ -13,6 +13,9 @@ MIXIN FOR BREAKPOINTS
    @else if $point == "large" {
      @media (max-width: 64em) { @content ; } // 1024px
   }
+   @else if $point == "xmedium" {
+     @media (max-width: 53em) { @content ; } // 850px
+  }
    @else if $point == "medium" {
      @media (max-width: 40em) { @content ; } // 640px
   }

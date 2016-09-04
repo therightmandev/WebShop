@@ -1,0 +1,100 @@
+#submitBody {
+    background: #E5E5E5;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.content {
+    height: auto;
+    text-align: center;
+    width: 70%;
+    background: white;
+    margin: 10em auto 0em auto;
+}
+
+#submit-header {
+    padding: 0.5em;
+    background-color: #242F40;
+    color: white;
+    margin-bottom: 1em;
+}
+
+form {
+    margin-top: 2em;
+    height: auto;
+}
+
+.submit_title p,
+.submit_desc p {
+    font-size: 1.1em;
+}
+
+.submit_title input,
+.submit_desc textarea {
+    display: block;
+    &:focus {
+        outline: none;
+        border-color: #4B1D3F;
+    }
+}
+
+form input,
+form textarea,
+form button {
+    margin: 0.3em auto 2em auto;
+    padding: 0.7em 1em;
+}
+
+form button {
+    border: none;
+    font-size: 1.05em;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.2em;
+    align-content: center;
+}
+
+.submit_img button {
+    background-color: #eaad1f;
+    font-weight: 700;
+}
+
+#submit_book {
+    background-color: #0b30b6;
+}
+
+#submit_cancel {
+    background-color: #231f1f;
+}
+
+.submit_buttons {
+    background: #BFD1E5;
+}
+
+// Add space to left-right on buttons ( total space: 12% ) and divide the remaining 88% with 3 to create 3 buttons with equal width
+.submit_buttons button {
+    float: left;
+    width: calc(88%/3);
+    margin: 1em 2%;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+@include breakpoint(xmedium) {
+    
+    // Stack buttons vertically and apply some padding
+    
+    .submit_buttons{
+        padding: 0.2em 0em;
+    }
+    .submit_buttons button {
+        float: none;
+        display: block;
+        width: 70%;
+        margin: 1em 15%;
+    }
+}

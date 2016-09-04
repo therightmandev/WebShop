@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Web Shop - Submit</title>
-    </head>
-    <body>
-        
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/sass/css/compile.css">
+    <title>Web Shop - Submit</title>
+    <script src="https://use.fontawesome.com/3b71bbcaa4.js"></script>
+</head>
+
+<body id="submitBody">
+   
+   <div class="navbar">
+            <div class="logo">
+                <!-- Outer span is for the border around the logo, inner span is for the color change.        -->
+                <h1><span id="border-span"><span class="color_1">Dev</span>Shop</h1></span>
+            </div>
+            <span class="hide-desktop burger-menu top-right">☰</span>
+            <nav id="nav">
+            <ul class="nav-list hide-mobile">
+                <span class="hide-desktop burger-menu">X</span>
+                <li><a href="/">home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="/login">log in</a></li>
+                <li id="#cart"><img src="../static/images/cart.svg" alt=""><a href="#">0</a></li>
+            </ul>
+            </nav>
+        </div>
+    <div class="content">
         <form action="/api/submit">
-            <label>
-                Title
-                <input type="text" name="name" placeholder="C++ for beginners">
-            </label>
-            <label>
-                Description
+            <h1 id="submit-header">Submit your book</h1>
+            <div class="submit_title"> <p>Title</p>
+                <input type="text" name="name" placeholder="C++ for beginners"> </div>
+            <div class="submit_desc"> <p>Description</p>
                 <textarea name="description" placeholder="This is a C++ book excelent for
-                    beginners because it turns C++ into something that the newcomers can
-                    appreciate.">
-                </textarea>
-            </label>
-            <label>
-                Image
-                <input type="button" value="this will be a button to submit an image">
-            </label>
-
-            <input type="submit" value="Submit Product">
+                beginners because it turns C++ into something that the newcomers can
+                appreciate."> </textarea>
+            </div>
+            <div class="submit_buttons clearfix" >
+            <div class="submit_img">
+                <button type="submit"><i class="fa fa-upload" aria-hidden="true">        Upload Image</i></button>
+            </div>
+            <button type="submit" id="submit_book"><i class="fa fa-check" aria-hidden="true">              Upload book</i> </button>
+            <button type="submit" id="submit_cancel"><i class="fa fa-ban" aria-hidden="true">     Cancel</i></button>
+            </div>
         </form>
+    </div>
+    
+                <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+            <script  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+            <script src="../static/scripts/main.js"></script>
+            
+</body>
 
-
-
-
-    </body>
 </html>
