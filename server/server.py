@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
-from .models import Book, User
 from .utils import is_username_available, is_email_available, send_verification_email
 from . import app, db
+from .models import Book, User
 
 @app.route('/')
 def index():

@@ -1,7 +1,6 @@
 from .. import db
 from ..models import User
 
-
 #~~~USER~~~#
 def is_username_available(username):
     found = User.query.filter_by(username=username).first()
