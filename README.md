@@ -9,7 +9,12 @@ Clone the repo, make sure you have python3 installed and run the following comma
 
 ##Running the server
 
-To run the server make sure you have the dependencies installed (see Installation above) and run this command:
+1. Make sure you have the dependencies installed (see 'Installation' above).
 
-    python server.py
+2. Set the environment variables `FLASK_EMAIL` and `FLASK_EMAIL_PASSWORD` as your gmail email and password, respectively.
+
+3. From the root folder of the project (the one that contains `runserver.py`) run:
+    python runserver.py
+
+4. Access `localhost:5000` on your browser to access the website.
 
