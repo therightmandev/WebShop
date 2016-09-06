@@ -53,30 +53,27 @@ form button {
     align-content: center;
 }
 
-.submit_img button {
+.submit-img button {
     background-color: #eaad1f;
     font-weight: 700;
 }
 
-#submit_book {
+.submit-book button {
     background-color: #0b30b6;
-}
-
-#submit_cancel {
-    background-color: #231f1f;
 }
 
 .submit_buttons {
     background: #BFD1E5;
 }
 
-// Add space to left-right on buttons ( total space: 12% ) and divide the remaining 88% with 3 to create 3 buttons with equal width
+// Add margin, get the total space after margin and divide it with x times the buttons.
 .submit_buttons button {
     float: left;
-    width: calc(88%/3);
-    margin: 1em 2%;
+    width: calc(60%/2);
+    margin: 1em 10%;
 }
 
+// Clearfix for floats.
 .clearfix:after {
     content: " ";
     display: block;
@@ -85,10 +82,8 @@ form button {
 }
 
 @include breakpoint(xmedium) {
-    
     // Stack buttons vertically and apply some padding
-    
-    .submit_buttons{
+    .submit_buttons {
         padding: 0.2em 0em;
     }
     .submit_buttons button {

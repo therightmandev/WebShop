@@ -14,7 +14,7 @@
     }
     .logo {
         color: white;
-        padding: 10px 10px;
+        padding: 10px;
         margin-left: 30px;
         display: inline-block;
         .color_1 {
@@ -53,6 +53,7 @@
         height: 32px;
         width: 32px;
     }
+    // Make the spacing smaller.
     @include breakpoint(large) {
         nav ul {
             right: 5%;
@@ -61,24 +62,28 @@
             padding: 1.5em;
         }
     }
+    // Activate the burger menu.
     @include breakpoint(medium) {
-        .navbar{
+        .navbar {
             position: relative;
             z-index: 1000;
         }
+        // Hide the actual navbar
         .hide-mobile {
-            display: none;         
+            display: none;
         }
-        
         nav ul {
             position: fixed;
-            opacity: 0.9;
+            opacity: 1;
             z-index: 1000;
             text-align: center;
             width: 100vw;
             height: 100vh;
             background-color: #011b79;
-            top: 0px; bottom: 0; left: 0; right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
         nav span {
             margin-top: 1em;
@@ -88,6 +93,11 @@
         nav ul li {
             margin-top: 2em;
             display: block;
+        }
+        nav ul li a {
+            &:hover {
+                color: #0883c8;
+            }
         }
         .burger-menu {
             display: inline-block;

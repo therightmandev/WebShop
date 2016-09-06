@@ -1,26 +1,24 @@
-@import '../base/reset';
-@import '../layout/navbar';
 
 #signpagesBody {
     display: flex;
     background: #99e74f;
-    background: url(/server/static/images/forest.JPG);
+    background: url(../images/forest.JPG);
     background-size: cover;
 }
 
 .form {
     margin: auto;
-    margin-top: 12em;
+    vertical-align: center;
     text-align: center;
-    vertical-align: middle;
     background: white;
     padding: 1em 5em 5em 5em;
+
     h2 {
         position: relative;
         margin: -2em 0em 2em 0em;
         padding: 1.5em 3em;
         z-index: 3;
-        background: #035310;
+        background: $light-blue;
         color: white;
         border-radius: 0.2em;
     }
@@ -32,10 +30,11 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 2px solid #b2b2b2;
+        border-bottom: 2px solid $light-gray;
+
         &:focus{
             outline: none;
-            border-bottom: 2px solid #6d0bee;
+            border-bottom: 2px solid $purple;
             color: #6d0bee;
             transition: 0.35s;
         }
@@ -43,27 +42,25 @@
 
     button{
         padding: 0.7em 2em;
-//        background: #08409b;  Blue color
-        background: #035310;
+        background: $blue;
         border: none;
         font-size: 1.05em;
         color: white;
-    
-        
+
+
         &:hover{
             cursor: pointer;
         }
     }
-    
+
     p{
         // Add some space on the top but bottom of the div expands so add the negative margin on bottom to reduce that effect
-        margin-top: 2em;
         margin-bottom: -2em;
         font-size: 1.05em;
         a{
             text-decoration: none;
             color: #6014db;
-            
+
         }
     }
 }
