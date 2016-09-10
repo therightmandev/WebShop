@@ -5,10 +5,8 @@ from .. import EMAIL, EMAIL_PASSWORD
 def send_verification_email(email):
     """this is supposed to send a verfication email
     BUT at the moment it only sends a 'welcome' email"""
-    print(type(email))
-    print(type(EMAIL))
-    print(type(EMAIL_PASSWORD))
-    msg = 'Hey hey!'
+    msg = ("Welcome to DevShop!"
+            "Click this link to confirm your email")
     username = EMAIL
     password = EMAIL_PASSWORD
     try:

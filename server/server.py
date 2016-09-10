@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from .utils import is_username_available, is_email_available, send_verification_email
+from .utils import is_username_available, is_email_available, send_verification_email, hash_password, verify_password
 from . import app, db
 from .models import Book, User
 
@@ -42,11 +42,11 @@ def api_signup():
         return "Please fill all the fields"
     username_available = is_username_available(username)
     email_available = is_email_available(email)
-    #TODO: hash password
     print('new user:', username)
     if username_available and email_available:
+        hashed_password = hash_password(password)
         send_verification_email(email)
-        db.session.add(User(username, password, email))
+        db.session.add(User(username, hashed_password, email))
         db.session.commit()
         return "User registered successfully"
     elif not username_available:
@@ -61,10 +61,16 @@ def api_login():
     username = request.form['username']
     password = request.form['password']
     print('logging in:', username)
-    #check user info
-    #set cookie and stuff if correct
-    #return a message if incorrect or w/e
-    return "WIP"
+    user = User.query.filter_by(username=username).first()
+    if user:
+        is_password_correct = verify_password(password, user.password)
+        if is_password_correct:
+            return "Logged in!"
+        else:
+            return "wrong password"
+    else:
+        return "User not found"
+    #TODO:set cookie
 
 
 #~TEMPORARY!~~~~#
